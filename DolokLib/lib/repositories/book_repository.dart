@@ -76,4 +76,21 @@ class BookRepository {
 
     return responseJson.statusCode == HttpStatus.created;
   }
+
+  Future<List<BookModel>> search(String query) async {
+    final headers = {
+      'Authorization': _local.read(token),
+    };
+
+    final responseJson = await _client.get(
+      '${Endpoints.search}/$query',
+      options: Options(
+        headers: headers,
+      ),
+    );
+
+    final model = BookResponseModel.fromJson(responseJson.data);
+
+    return model.data;
+  }
 }

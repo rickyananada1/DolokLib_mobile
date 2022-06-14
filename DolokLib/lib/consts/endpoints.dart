@@ -10,4 +10,5 @@ class Endpoints {
   static const gallery = '/api/gallery';
   static const extend = '/api/extend';
   static const borrowReturn = '/api/return';
+  static const search = '/api/books/search';
 }

@@ -1,3 +1,4 @@
+import 'package:DolokLib/features/search/search_book_delegate.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -18,6 +19,10 @@ class SearchField extends StatelessWidget {
       ),
       child: TextField(
         onChanged: (value) => print(value),
+        onTap: () => showSearch(
+          context: context, 
+          delegate: SearchBookDelegate(),
+        ),
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
                 horizontal: getProportionateScreenWidth(20),
