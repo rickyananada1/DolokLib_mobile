@@ -26,13 +26,9 @@ class ProductCardCategory extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GestureDetector(
-          onTap: () => Navigator.pushNamed(
-            context,
-            DetailsScreen.routeName,
-            arguments: ProductDetailsArguments(
-              productByCategory: product,
-            ),
-          ),
+          onTap: () => Get.toNamed(DetailsScreen.routeName, arguments: ProductDetailsArguments(
+            productByCategory: product,
+          )),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -19,7 +19,10 @@ class DetailsScreen extends GetView<DetailBookController> {
       appBar: AppBar(
         title: Text('Detail Buku', style: Get.textTheme.titleLarge),
       ),
-      body: ProductDescription(product: agrs.product),
+      body: ProductDescription(
+        productByCategory: controller.args.productByCategory,
+        product: controller.args.product,
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16),
         child: DefaultButton(
