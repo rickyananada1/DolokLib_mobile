@@ -73,7 +73,7 @@ class ProductDescription extends StatelessWidget {
           title: Text('Tahun Terbit', style: Get.textTheme.labelMedium),
           subtitle: Text(
             product?.tahunTerbit ??
-            productByCategory?.tahunTerbit.toIso8601String() ??
+            productByCategory?.createdAt.toIso8601String() ??
             '-', style: Get.textTheme.titleMedium),
         ),
         Divider(

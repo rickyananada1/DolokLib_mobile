@@ -1,6 +1,5 @@
 import 'package:DolokLib/models/history/history.dart';
 import 'package:DolokLib/models/history/history_response.dart';
-import 'package:DolokLib/models/simple_response_model.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get_connect/http/src/status/http_status.dart';
 import 'package:get_storage/get_storage.dart';

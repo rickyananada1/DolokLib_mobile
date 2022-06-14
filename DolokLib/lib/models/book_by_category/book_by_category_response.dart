@@ -1,5 +1,4 @@
 import 'package:DolokLib/models/book_by_category/book_by_category.dart';
-import 'package:DolokLib/models/book_by_category/link_category_book.dart';
 
 class BookByCategoryResponse {
     BookByCategoryResponse({
@@ -9,7 +8,6 @@ class BookByCategoryResponse {
         required this.from,
         required this.lastPage,
         required this.lastPageUrl,
-        required this.links,
         required this.nextPageUrl,
         required this.path,
         required this.perPage,
@@ -18,19 +16,18 @@ class BookByCategoryResponse {
         required this.total,
     });
 
-    final int currentPage;
+    final int? currentPage;
     final List<BookByCategory> data;
-    final String firstPageUrl;
-    final int from;
-    final int lastPage;
-    final String lastPageUrl;
-    final List<LinkCategoryBook> links;
+    final String? firstPageUrl;
+    final int? from;
+    final int? lastPage;
+    final String? lastPageUrl;
     final dynamic nextPageUrl;
-    final String path;
-    final int perPage;
+    final String? path;
+    final int? perPage;
     final dynamic prevPageUrl;
-    final int to;
-    final int total;
+    final int? to;
+    final int? total;
 
     factory BookByCategoryResponse.fromJson(Map<String, dynamic> json) => BookByCategoryResponse(
         currentPage: json["current_page"],
@@ -39,7 +36,6 @@ class BookByCategoryResponse {
         from: json["from"],
         lastPage: json["last_page"],
         lastPageUrl: json["last_page_url"],
-        links: List<LinkCategoryBook>.from(json["links"].map((x) => LinkCategoryBook.fromJson(x))),
         nextPageUrl: json["next_page_url"],
         path: json["path"],
         perPage: json["per_page"],
@@ -55,7 +51,6 @@ class BookByCategoryResponse {
         "from": from,
         "last_page": lastPage,
         "last_page_url": lastPageUrl,
-        "links": List<dynamic>.from(links.map((x) => x.toJson())),
         "next_page_url": nextPageUrl,
         "path": path,
         "per_page": perPage,

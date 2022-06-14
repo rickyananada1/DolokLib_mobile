@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:DolokLib/components/custom_surfix_icon.dart';
 import 'package:DolokLib/components/form_error.dart';
 import 'package:DolokLib/helper/keyboard.dart';
-import 'package:DolokLib/screens/forgot_password/forgot_password_screen.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 

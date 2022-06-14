@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:DolokLib/components/socal_card.dart';
 import 'package:DolokLib/constants.dart';
 import 'package:DolokLib/size_config.dart';
 

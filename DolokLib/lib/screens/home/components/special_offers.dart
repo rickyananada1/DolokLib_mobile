@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../size_config.dart';
-import 'section_title.dart';
 import 'special_kategori_title.dart';
 
 class SpecialOffers extends GetWidget<HomeController> {

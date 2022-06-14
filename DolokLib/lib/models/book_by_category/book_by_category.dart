@@ -3,12 +3,10 @@ import 'package:DolokLib/models/book_by_category/category_book.dart';
 class BookByCategory {
     BookByCategory({
         required this.id,
-        required this.kategoriId,
         required this.judul,
         required this.pengarang,
         required this.penerbit,
         required this.jumlahHalaman,
-        required this.tahunTerbit,
         required this.foto,
         required this.edisiBuku,
         required this.jumlahBuku,
@@ -20,14 +18,12 @@ class BookByCategory {
     });
 
     final int id;
-    final int kategoriId;
-    final String judul;
-    final String pengarang;
-    final String penerbit;
-    final String jumlahHalaman;
-    final DateTime tahunTerbit;
-    final String foto;
-    final String edisiBuku;
+    final String? judul;
+    final String? pengarang;
+    final String? penerbit;
+    final String? jumlahHalaman;
+    final String? foto;
+    final String? edisiBuku;
     final int jumlahBuku;
     final int createdBy;
     final dynamic updatedBy;
@@ -37,12 +33,10 @@ class BookByCategory {
 
     factory BookByCategory.fromJson(Map<String, dynamic> json) => BookByCategory(
         id: json["id"],
-        kategoriId: json["kategori_id"],
         judul: json["judul"],
         pengarang: json["pengarang"],
         penerbit: json["penerbit"],
         jumlahHalaman: json["jumlah_halaman"],
-        tahunTerbit: DateTime.parse(json["tahun_terbit"]),
         foto: json["foto"],
         edisiBuku: json["edisi_buku"],
         jumlahBuku: json["jumlah_buku"],
@@ -55,12 +49,10 @@ class BookByCategory {
 
     Map<String, dynamic> toJson() => {
         "id": id,
-        "kategori_id": kategoriId,
         "judul": judul,
         "pengarang": pengarang,
         "penerbit": penerbit,
         "jumlah_halaman": jumlahHalaman,
-        "tahun_terbit": "${tahunTerbit.year.toString().padLeft(4, '0')}-${tahunTerbit.month.toString().padLeft(2, '0')}-${tahunTerbit.day.toString().padLeft(2, '0')}",
         "foto": foto,
         "edisi_buku": edisiBuku,
         "jumlah_buku": jumlahBuku,

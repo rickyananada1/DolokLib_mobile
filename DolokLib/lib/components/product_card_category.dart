@@ -45,7 +45,7 @@ class ProductCardCategory extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: ExtendedImage.network(
-                    product.foto,
+                    product.foto ?? '-',
                     width: 100,
                     height: 100,
                   ),
@@ -53,7 +53,7 @@ class ProductCardCategory extends StatelessWidget {
               ),
               const SizedBox(height: 6),
               Text(
-                product.judul,
+                product.judul ?? '-',
                 style: TextStyle(color: Colors.black),
                 textAlign: TextAlign.center,
                 maxLines: 2,
